@@ -1,0 +1,14 @@
+schatten <- function(m,p)
+{
+     if (class(m)[1]!='matrix'){
+         stop("'m' must be a 'matrix' object")
+     }
+     if (p <=0){
+         stop("p must be >0")
+     }    
+     vector=svd(m,nu=0, nv=0)$d
+     s.norm=(sum((vector)^p))^(1/p)
+     return(s.norm)
+}
+
+The above R function calculates the Schatten quasi-norm if 0<p<1 and the Schatten norm if p>=1. 
