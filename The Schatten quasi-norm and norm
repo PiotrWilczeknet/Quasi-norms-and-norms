@@ -12,3 +12,4 @@ schatten <- function(m,p)
 }
 
 The above R function calculates the Schatten quasi-norm if 0<p<1 and the Schatten norm if p>=1. 
+this 
