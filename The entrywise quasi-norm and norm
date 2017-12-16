@@ -1,0 +1,14 @@
+entrywise <- function(m,p)
+{
+     if (class(m)[1]!='matrix'){
+         stop("'m' must be a 'matrix' object")
+     }
+     if (p<=0){
+         stop("p must be >0")
+     }
+     vector=abs(c(m))
+     e.norm=(sum((vector)^p))^(1/p)
+     return(e.norm)
+}
+
+The above R function calculates the entrywise quasi-norm if 0<p<1 and the entrywise norm if p>=1.
